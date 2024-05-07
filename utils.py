@@ -2,12 +2,13 @@
 # Copyright Ratiu Sebastian, All rights reserved 2022
 
 import telegram.ext
-from telegram.ext.filters import Filters
 from telegram.ext import CallbackQueryHandler
-from keep_alive import keep_alive
-import trivia_funcs
+from telegram.ext.filters import Filters
+
 import food
 import menu
+import trivia_funcs
+from keep_alive import keep_alive
 
 ##################### whitelist #######################
 whitelist = ["@SPAWN_LKD", "@Starstroke", "@sandorsinofobu", "@SergiuWat"]
