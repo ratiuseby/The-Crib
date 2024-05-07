@@ -15,7 +15,7 @@ def menu(update, context):
 
     reply_markup = InlineKeyboardMarkup(keyboard)
 
-    if update.message == None:
+    if update.message is None:
         update.callback_query.message.reply_text("Please choose:",
                                                  reply_markup=reply_markup)
     else:

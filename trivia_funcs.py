@@ -1,10 +1,12 @@
 # Creation Date: 2022.06.27
 # Copyright Ratiu Sebastian, All rights reserved 2022
 
-import requests
-import bs4
-import menu
 import time
+
+import bs4
+import requests
+
+import menu
 
 
 ##########
@@ -19,11 +21,11 @@ def trivia(update, context):
         elif type == 'fact':
             fun_fact(update, context)
         else:
-            update.message.reply_text(f"""
+            update.message.reply_text("""
       Sorry 🧐...doesn't seem like we have a trivia option like that. You can check the help page if you are lost, I got you covered 😉
                             """)
     except:
-        update.message.reply_text(f"""
+        update.message.reply_text("""
       Oops 😬...looks like you forgot to add your trivia option. You can check the help page if you are lost, I got you covered 😉
                             """)
 
@@ -74,7 +76,7 @@ def word_of_the_day(update, context):
         Hmmmmmmm...seems like the following error has occured : {e}
         \nMaybe you can try again? """)
     except IndexError:
-        update.callback_query.message.reply_text(f"""
+        update.callback_query.message.reply_text("""
         Hmmmmmmm...seems like the server has a small hiccup.
         \nMaybe you can try again? """)
 

@@ -1,9 +1,10 @@
 # Creation Date: 2022.06.27
 # Copyright Ratiu Sebastian, All rights reserved 2022
 
-import requests
+
 import bs4
-from random import randrange
+import requests
+
 import menu
 
 
@@ -17,12 +18,12 @@ def food(update, context):
         if type == 'dishes':
             daily_dishes(update, context)
         else:
-            update.message.reply_text(f"""
+            update.message.reply_text("""
       Sorry 🧐...doesn't seem like we have a food option like that. You can check the help page if you are lost, I got you covered 😉
                             """)
 
     except:
-        update.message.reply_text(f"""
+        update.message.reply_text("""
       Oops 😬...looks like you forgot to add your food option. You can check the help page if you are lost, I got you covered 😉
                             """)
 
